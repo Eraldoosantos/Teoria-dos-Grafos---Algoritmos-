@@ -21,6 +21,6 @@ deve-se inserir o grafo, ou seja, em nosso exemplo, uma matriz G[5][5]. Então, 
 
 Feito isso, deve-se escolher o nó inicial. Por exemplo, o 0. 
 
-O algoritmo utilizará a lógica de Dijkstra para encontrar o caminho mais curto no grafo que foi descrito. 
+Então, o algoritmo utilizará a lógica de Dijkstra para encontrar o caminho mais curto para grafo que foi descrito e dirá o resultado. 
 
 
