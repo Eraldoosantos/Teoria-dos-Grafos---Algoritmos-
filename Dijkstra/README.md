@@ -1,4 +1,4 @@
-<h1>Algoritmos de Teoria dos Grafos - Algortimo de Dijsktra</h1> 
+<h1>Algortimo de Dijsktra</h1> 
 
 <b>Conceito:</b> É um algoritmo que calcula o caminho mais curto , em termos de peso 
 total das arestas, entre um nó inicial e todos os demais nós no grafo. Foi desenvolvido
