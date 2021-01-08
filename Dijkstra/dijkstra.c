@@ -13,7 +13,7 @@ int main()
     int i, j; 
 
     // The following lines prompt to user the number of vertices n and the edge's values in G. 
-    printf("Please, cho3ose a number of vertices: \n");
+    printf("Please, choose a number of vertices: \n");
     scanf("%d", &n);
 
     printf("Please, enter the graph: \n");
