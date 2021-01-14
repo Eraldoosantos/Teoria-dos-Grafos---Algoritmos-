@@ -1,0 +1,62 @@
+#include <stdio.h>
+#include<stdlib.h>
+
+#define INF 999
+
+// Number of vertices
+int nV;
+
+void printMatrix(int matrix[][nV]);
+
+// Implementing floyd warshall algorithm
+void floydWarshall(int graph[][nV]) {
+  int matrix[nV][nV], i, j, k;
+
+  for (i = 0; i < nV; i++)
+    for (j = 0; j < nV; j++)
+      matrix[i][j] = graph[i][j];
+
+  // Adding vertices individually
+  for (k = 0; k < nV; k++) {
+    for (i = 0; i < nV; i++) {
+      for (j = 0; j < nV; j++) {
+        if (matrix[i][k] + matrix[k][j] < matrix[i][j])
+          matrix[i][j] = matrix[i][k] + matrix[k][j];
+      }
+    }
+  }
+  printf("\nShortest distance matrix:\n");
+  printMatrix(matrix);
+}
+
+void printMatrix(int matrix[][nV]) {
+  for (int i = 0; i < nV; i++) {
+    for (int j = 0; j < nV; j++) {
+      if (matrix[i][j] == INF)
+        printf("%4s", "INF");
+      else
+        printf("%4d", matrix[i][j]);
+    }
+    printf("\n");
+  }
+}
+
+int main() {
+    int i, j;
+
+    printf("Enter no. of vertices: ");
+	scanf("%d", &nV);
+	int graph[nV][nV];
+    
+	printf("\nEnter the adjacency matrix:\n");
+    printf("___________________________\n");
+    printf("Obs.: Enter 999 for INF\n\n");
+	
+    // Matrix input
+	for (i=0; i < nV; i++)
+		for (j=0; j < nV; j++)
+			scanf("%d", &graph[i][j]);
+
+
+    floydWarshall(graph);
+}
